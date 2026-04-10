@@ -1,0 +1,13 @@
+{
+  "name": "ipa-info-generator",
+  "version": "1.0.0",
+  "description": "IPA 文件信息提取并生成 H5 页面",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "bplist-parser": "^0.3.2"
+  }
+}

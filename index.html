@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华福小福牛 - IPA 信息</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: #e5e5e5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            border-radius: 22px;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .app-name {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .bundle-id {
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 32px;
+            font-family: monospace;
+        }
+
+        .info-container {
+            display: flex;
+            gap: 16px;
+        }
+
+        .info-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-box {
+            background: #f5f5f5;
+            border-radius: 20px;
+            padding: 16px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-label {
+            font-size: 12px;
+            color: #999;
+            font-weight: 500;
+        }
+
+        .info-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a2e;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .install-btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            margin-top: 24px;
+            background: #007AFF;
+            color: #ffffff;
+            border: none;
+            border-radius: 14px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .install-btn:active {
+            background: #0056b3;
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                padding: 30px 24px;
+                border-radius: 24px;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .app-name {
+                font-size: 24px;
+            }
+
+            .info-container {
+                gap: 12px;
+            }
+
+            .info-box {
+                padding: 14px 16px;
+            }
+
+            .info-value {
+                font-size: 14px;
+            }
+
+            .install-btn {
+                padding: 14px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .info-value {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="app-icon">
+            <img src="ipa/AppsStore.png" alt="华福小福牛" width="100" height="100">
+        </div>
+        <h1 class="app-name">华福小福牛</h1>
+        <p class="bundle-id">com.huafusc.xiaofuniu</p>
+
+        <div class="info-container">
+            <div class="info-column">
+                <div class="info-box">
+                    <span class="info-label">版本号</span>
+                    <span class="info-value">7.3.0</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-label">Build号</span>
+                    <span class="info-value">20260409001</span>
+                </div>
+            </div>
+            <div class="info-column">
+                <div class="info-box">
+                    <span class="info-label">文件大小</span>
+                    <span class="info-value">137.90 MB</span>
+                </div>
+                <div class="info-box">
+                    <span class="info-label">日期</span>
+                    <span class="info-value">2026/04/09 11:23</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="itms-services://?action=download-manifest&url=manifest.plist" class="install-btn">安装应用</a>
+
+        <p class="footer">由 build.js 自动生成</p>
+    </div>
+</body>
+</html>
