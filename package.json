@@ -2,9 +2,10 @@
   "name": "ipa-info-generator",
   "version": "1.0.0",
   "description": "IPA 文件信息提取并生成 H5 页面",
-  "main": "build.js",
+  "main": "server.js",
   "scripts": {
-    "build": "node build.js"
+    "build": "node build.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.10",

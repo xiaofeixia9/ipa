@@ -236,6 +236,13 @@ function generateHTML(appInfo) {
 }
 
 function main() {
+    // 检查 IPA 文件是否存在
+    if (!fs.existsSync(IPA_PATH)) {
+        console.log('⚠️  IPA 文件不存在，跳过构建');
+        console.log('   使用已有的 index.html');
+        return;
+    }
+
     console.log('🔍 正在解析 IPA 文件...');
     console.log(`   路径: ${IPA_PATH}`);
 
